@@ -121,7 +121,7 @@ python model_train/Defect_Categorization_Stage/SVM_Final_Models.py
 Apply the full two-stage pipeline to new data:
 
 ```bash
-python inference/main.py
+python main.py
 ```
 
 - **Stage 1**: Scale & predict anomaly vs. normal  
@@ -206,8 +206,7 @@ Feel free to explore, reproduce the experiments, and extend the framework for yo
 │   └── Defect_Categorization_Stage/  # 阶段二：训练与保存
 │       └── SVM_Final_Models.py
 │
-├── inference/                    # 两阶段推理脚本
-│   └── main.py
+├── main.py                    # 两阶段推理脚本
 │
 ├── raw_data/                     # 示例原始 PD 信号
 │   └── *.csv
@@ -254,7 +253,7 @@ python -m preprocessing.feature_extraction   # 特征提取
 或运行统一批处理脚本：
 
 ```bash
-python inference/main.py
+python main.py
 ```
 
 结果依次保存于 `features_out/`。
